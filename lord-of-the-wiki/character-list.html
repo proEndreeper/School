@@ -4,6 +4,18 @@
     <title>Character List</title>
   </head>
   <body>
+    
+    <script type="application/json" id="chl_data"><!--
+      {
+        "characters":{
+          "ralph":{
+            "name":"Ralph",
+            "bio":["Owner of the Conch","Often makes brash decisions when he isn't given time to think"]
+          }
+        }
+      }
+    --></script>
+    
     <style>
       #chl_title {
         display:block;
@@ -92,22 +104,7 @@
       </tbody>
     </table>
     
-    <script type="application/json" id="chl_data">
-      {
-        "characters":{
-          "someone":{
-            "name":"Someone",
-            "bio":["Someone in the story"]
-          },
-          "ralph":{
-            "name":"Ralph",
-            "bio":["Owner of the Conch"]
-          }
-        }
-      }
-    </script>
-    
-    <script type="text/javascript">
+    <script type="text/javascript"><!--
       var data = JSON.parse(document.getElementById("chl_data").innerHTML);
     
       function l(id){return document.getElementById(id)}
@@ -181,6 +178,6 @@
       
       updateList();
       l('chl_search').addEventListener("change",updateList);
-    </script>
+    --></script>
   </body>
 </html>
